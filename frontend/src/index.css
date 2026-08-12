@@ -1,1 +1,73 @@
 @import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --nexa-background: #f8fafc;
+  --nexa-surface: #ffffff;
+  --nexa-surface-muted: #f1f5f9;
+
+  /* Text */
+  --nexa-text-primary: #0f172a;
+  --nexa-text-secondary: #64748b;
+  --nexa-text-muted: #94a3b8;
+
+  /* UI */
+  --nexa-border: #e2e8f0;
+
+  /* Brand */
+  --nexa-primary: #16a34a;
+  --nexa-primary-hover: #15803d;
+
+  /* Semantic */
+  --nexa-income: #16a34a;
+  --nexa-expense: #ef4444;
+  --nexa-warning: #f59e0b;
+}
+
+.dark {
+  /* Backgrounds */
+  --nexa-background: #0b1120;
+  --nexa-surface: #111827;
+  --nexa-surface-muted: #1f2937;
+
+  /* Text */
+  --nexa-text-primary: #f8fafc;
+  --nexa-text-secondary: #94a3b8;
+  --nexa-text-muted: #64748b;
+
+  /* UI */
+  --nexa-border: #1e293b;
+
+  /* Brand */
+  --nexa-primary: #22c55e;
+  --nexa-primary-hover: #16a34a;
+
+  /* Semantic */
+  --nexa-income: #22c55e;
+  --nexa-expense: #f87171;
+  --nexa-warning: #fbbf24;
+}
+
+@theme {
+  /* Backgrounds */
+  --color-background: var(--nexa-background);
+  --color-surface: var(--nexa-surface);
+  --color-surface-muted: var(--nexa-surface-muted);
+
+  /* Text */
+  --color-text-primary: var(--nexa-text-primary);
+  --color-text-secondary: var(--nexa-text-secondary);
+  --color-text-muted: var(--nexa-text-muted);
+
+  /* UI */
+  --color-border: var(--nexa-border);
+
+  /* Brand */
+  --color-primary: var(--nexa-primary);
+  --color-primary-hover: var(--nexa-primary-hover);
+
+  /* Semantic */
+  --color-income: var(--nexa-income);
+  --color-expense: var(--nexa-expense);
+  --color-warning: var(--nexa-warning);
+}

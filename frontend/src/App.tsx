@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-blue-300">Test Nexa</h1>
+      <h1 className="text-primary">Test Nexa</h1>
     </>
   )
 }
