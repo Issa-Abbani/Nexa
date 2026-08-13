@@ -3,6 +3,7 @@
 :root {
   /* Backgrounds */
   --nexa-background: #f8fafc;
+  --nexa-auth-secondary-background: #1cc259;
   --nexa-surface: #ffffff;
   --nexa-surface-muted: #f1f5f9;
 
@@ -27,6 +28,7 @@
 .dark {
   /* Backgrounds */
   --nexa-background: #0b1120;
+  --nexa-auth-secondary-background: #126731;
   --nexa-surface: #111827;
   --nexa-surface-muted: #1f2937;
 
@@ -51,6 +53,7 @@
 @theme {
   /* Backgrounds */
   --color-background: var(--nexa-background);
+  --color-auth-background: var(--nexa-auth-secondary-background);
   --color-surface: var(--nexa-surface);
   --color-surface-muted: var(--nexa-surface-muted);
 
