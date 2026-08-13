@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Login from "./pages/auth/Login";
-// import Register from "./pages/auth/Register";
+import AuthLayout from "./pages/auth/AuthLayout";
+import LoginForm from "./components/auth/LoginForm";
+import SignUpForm from "./components/auth/SignUpForm";
 
 // import ProtectedLayout from "./layouts/ProtectedLayout";
 // import Home from "./pages/home/Home";
@@ -14,19 +15,29 @@ import Login from "./pages/auth/Login";
 // import Analytics from "./pages/finance/analytics/Analytics";
 
 export const router = createBrowserRouter([
+  // Authentication routes
   {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/register",
-    // element: <Register />,
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "/login",
+        element: <LoginForm />,
+      },
+      {
+        path: "/signup",
+        element: <SignUpForm />,
+      },
+    ],
   },
 
   // Everything underneath here requires authentication
   {
     // element: <ProtectedLayout />,
     children: [
+      {
+        path: "/",
+        // element: <Home />,
+      },
       {
         path: "/home",
         // element: <Home />,

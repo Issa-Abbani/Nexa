@@ -1,11 +1,12 @@
-import LoginForm from "../../components/auth/LoginForm";
 import authBgLH from "../../assets/backgrounds/authBgLightHorizontal.svg";
 import authBgDH from "../../assets/backgrounds/authBgDarkHorizontal.svg";
 // import authBgLV from "../../assets/backgrounds/authBgLightVertical.svg";
 // import authBgDV from "../../assets/backgrounds/authBgDarkVertical.svg";
 import { useTheme } from "../../hooks/useTheme";
+import { Outlet } from "react-router-dom";
 
-export function Login() {
+
+export default function AuthLayout() {
   const { effectiveTheme } = useTheme();
 
   const horizontalBackground = effectiveTheme === "dark" ? authBgDH : authBgLH;
@@ -23,10 +24,8 @@ export function Login() {
 
       {/* Right form */}
       <section className="flex w-1/3 items-center justify-center bg-auth-background">
-        <LoginForm />
+        <Outlet />
       </section>
     </main>
   );
 }
-
-export default Login;

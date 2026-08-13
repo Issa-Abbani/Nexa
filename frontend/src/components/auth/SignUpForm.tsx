@@ -1,21 +1,24 @@
 import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
 
-export default function LoginForm() {
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>):void{
+export default function SignUpForm() {
+  function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full h-2/3 max-w-md space-y-6 rounded-2xl border border-border bg-surface p-8 shadow-lg flex flex-col justify-between">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full h-2/3 max-w-md space-y-6 rounded-2xl border border-border bg-surface p-8 shadow-lg flex flex-col justify-between"
+    >
       <div className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight text-text-primary">
-          Welcome back to <span className="text-4xl text-primary font-mono">NEXA</span>
+          Welcome to{" "}
+          <span className="text-4xl text-primary font-mono">NEXA</span>
         </h1>
 
         <p className="text-m text-text-secondary italic">
-          Sign in to continue to Nexa.
+          Begin your evolution with Nexa by signing up below.
         </p>
       </div>
 
@@ -32,7 +35,22 @@ export default function LoginForm() {
             id="email"
             name="email"
             type="email"
-            autoComplete="email"
+            className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-primary outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label
+            htmlFor="username"
+            className="text-sm font-medium text-text-primary"
+          >
+            Username
+          </label>
+
+          <input
+            id="username"
+            name="username"
+            type="text"
             className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-primary outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
@@ -49,7 +67,6 @@ export default function LoginForm() {
             id="password"
             name="password"
             type="password"
-            autoComplete="current-password"
             className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-primary outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
@@ -59,16 +76,16 @@ export default function LoginForm() {
         type="submit"
         className="w-full rounded-lg bg-primary px-4 py-2.5 font-medium text-white transition hover:bg-primary-hover focus:outline-none cursor-pointer"
       >
-        Sign in
+        Sign Up
       </button>
 
       <p className="text-center text-sm text-text-secondary">
-        Don't have an account?{" "}
+        Already have an account?{" "}
         <Link
-          to="/signup"
+          to="/login"
           className="font-medium text-primary hover:text-primary-hover"
         >
-          Create one
+          Sign in
         </Link>
       </p>
     </form>
