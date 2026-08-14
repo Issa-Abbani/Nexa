@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Nexa emblem</title>
+  <desc id="desc">A green geometric emblem combining an N-shaped pathway, upward arrow, and circular optimization loop.</desc>
+
+  <defs>
+    <linearGradient id="left" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#075A38"/>
+      <stop offset="100%" stop-color="#27C95A"/>
+    </linearGradient>
+
+    <linearGradient id="arrow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#07834D"/>
+      <stop offset="100%" stop-color="#35D33A"/>
+    </linearGradient>
+
+    <linearGradient id="loop" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#006B43"/>
+      <stop offset="100%" stop-color="#45D52E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- N-shaped pathway -->
+  <path
+    d="M132 786
+       L276 786
+       L439 515
+       L533 615
+       L606 525
+       L498 399
+       C454 348 378 357 347 414
+       Z"
+    fill="url(#left)"/>
+
+  <!-- Rising arrow -->
+  <path
+    d="M427 697
+       L554 570
+       L526 542
+       L642 417
+       L619 387
+       L875 252
+       L847 518
+       L812 493
+       L690 617
+       L661 589
+       L534 752
+       Z"
+    fill="url(#arrow)"/>
+
+  <!-- Circular optimization loop -->
+  <path
+    d="M414 538
+       C363 595 359 675 393 735
+       C428 798 494 835 568 835
+       C673 835 758 753 758 650
+       C758 600 738 557 705 524
+       L646 583
+       C663 602 672 625 672 650
+       C672 707 627 752 568 752
+       C525 752 489 727 473 691
+       C458 657 465 618 491 591
+       Z"
+    fill="url(#loop)"/>
+
+  <!-- Inner fold/shadow -->
+  <path
+    d="M414 538
+       C382 576 373 622 383 663
+       C395 713 431 753 478 773
+       C453 745 440 710 444 674
+       C448 636 466 607 491 591
+       Z"
+    fill="#064F35"
+    opacity=".34"/>
+</svg>

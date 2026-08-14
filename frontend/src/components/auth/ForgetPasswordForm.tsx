@@ -40,7 +40,7 @@ export default function ForgetPasswordForm() {
       <div className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight text-text-primary">
           Reset your{" "}
-          <span className="text-4xl text-primary font-mono">NEXA</span>
+          <span className="text-3xl text-primary font-nexa">NEXA</span>
           {" "}Password! 
         </h1>
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -73,4 +74,7 @@
   --color-income: var(--nexa-income);
   --color-expense: var(--nexa-expense);
   --color-warning: var(--nexa-warning);
+
+  /* Fonts */
+  --font-nexa: "Orbitron", sans-serif;
 }
