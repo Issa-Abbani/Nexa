@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AuthLayout from "./pages/auth/AuthLayout";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
+import ForgetPasswordForm from "./components/auth/ForgetPasswordForm";
 
 // import ProtectedLayout from "./layouts/ProtectedLayout";
 // import Home from "./pages/home/Home";
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUpForm />,
+      },
+      {
+        path: "/reset-password",
+        element: <ForgetPasswordForm />,
       },
     ],
   },

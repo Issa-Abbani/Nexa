@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
 
-export default function LoginForm() {
+export default function ForgetPasswordForm() {
   const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   // const [error, setError] = useState<string>("");
   //To be used later when hanlding errors after coding the backend
@@ -27,13 +26,9 @@ export default function LoginForm() {
     setEmail(e.target.value);
   };
 
-  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setPassword(e.target.value);
-  };
 
   const resetFormUI = (): void => {
     setEmail("");
-    setPassword("");
     setIsLoading(false);
   };
 
@@ -44,12 +39,13 @@ export default function LoginForm() {
     >
       <div className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight text-text-primary">
-          Welcome back to{" "}
+          Reset your{" "}
           <span className="text-4xl text-primary font-mono">NEXA</span>
+          {" "}Password! 
         </h1>
 
         <p className="text-m text-text-secondary italic">
-          Sign in to continue to Nexa.
+          Present your email to receive a verification code!
         </p>
       </div>
 
@@ -73,24 +69,6 @@ export default function LoginForm() {
           />
         </div>
 
-        <div className="space-y-2">
-          <label
-            htmlFor="password"
-            className="text-sm font-medium text-text-primary"
-          >
-            Password
-          </label>
-
-          <input
-            id="password"
-            name="password"
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            autoComplete="current-password"
-            className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-primary outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-          />
-        </div>
       </div>
 
       <button
@@ -101,31 +79,19 @@ export default function LoginForm() {
         {isLoading ? (
           <LoaderCircle className="size-5 animate-spin text-primary" />
         ) : (
-          "Log In"
+          "Send Email"
         )}
       </button>
 
-      <div className="flex flex-col gap-2">
-        <p className="text-center text-sm text-text-secondary">
-          Forgot your password?{" "}
-          <Link
-            to="/reset-password"
-            className="font-medium text-primary hover:text-primary-hover"
-          >
-            Reset it here!
-          </Link>
-        </p>
-
-        <p className="text-center text-sm text-text-secondary">
-          Don't have an account?{" "}
-          <Link
-            to="/signup"
-            className="font-medium text-primary hover:text-primary-hover"
-          >
-            Create one
-          </Link>
-        </p>
-      </div>
+      <p className="text-center text-sm text-text-secondary">
+        Remembered your password?{" "}
+        <Link
+          to="/login"
+          className="font-medium text-primary hover:text-primary-hover"
+        >
+          Log In
+        </Link>
+      </p>
     </form>
   );
 }
