@@ -46,7 +46,7 @@ export default function SignUpForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full h-2/3 max-w-md space-y-6 rounded-2xl border border-border bg-surface p-8 shadow-lg flex flex-col justify-between"
+      className="lg:w-full w-3/4 h-2/3 max-w-md space-y-6 rounded-2xl border border-border bg-surface p-8 shadow-lg flex flex-col justify-between"
     >
       <div className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight text-text-primary">

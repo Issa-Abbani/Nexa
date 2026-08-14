@@ -1,29 +1,33 @@
 import authBgLH from "../../assets/backgrounds/authBgLightHorizontal.svg";
 import authBgDH from "../../assets/backgrounds/authBgDarkHorizontal.svg";
-// import authBgLV from "../../assets/backgrounds/authBgLightVertical.svg";
-// import authBgDV from "../../assets/backgrounds/authBgDarkVertical.svg";
+import authBgLV from "../../assets/backgrounds/authBgLightVertical.svg";
+import authBgDV from "../../assets/backgrounds/authBgDarkVertical.svg";
 import { useTheme } from "../../hooks/useTheme";
 import { Outlet } from "react-router-dom";
-
 
 export default function AuthLayout() {
   const { effectiveTheme } = useTheme();
 
-  const horizontalBackground = effectiveTheme === "dark" ? authBgDH : authBgLH;
-
-  // const verticalBackground = effectiveTheme === "dark" ? authBgDV : authBgLV;
-  //To be discussed later when implementing mobile UI
+  const isDark = effectiveTheme === "dark";
 
   return (
-    <main className="flex min-h-screen bg-background">
-      {/* Left visual */}
-      <section className="w-2/3 relative overflow-hidden">
-        <img src={horizontalBackground} alt="" className="h-full w-full object-cover" />
-        <div className="absolute inset-y-0 right-0 w-1/4 bg-linear-to-r from-transparent to-auth-background" />
-      </section>
+    <main className="relative min-h-screen overflow-hidden bg-background">
+      {/* Background */}
+      <picture className="absolute inset-0">
+        <source
+          media="(max-width: 1279px)"
+          srcSet={isDark ? authBgDV : authBgLV}
+        />
 
-      {/* Right form */}
-      <section className="flex w-1/3 items-center justify-center bg-auth-background">
+        <img
+          src={isDark ? authBgDH : authBgLH}
+          alt=""
+          className="h-full w-full object-cover"
+        />
+      </picture>
+
+      {/* Form */}
+      <section className="relative z-10 flex min-h-screen items-center justify-center xl:justify-end xl:pr-16">
         <Outlet />
       </section>
     </main>
