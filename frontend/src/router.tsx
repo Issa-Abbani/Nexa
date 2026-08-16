@@ -6,14 +6,20 @@ import SignUpForm from "./components/auth/SignUpForm";
 import ForgetPasswordForm from "./components/auth/ForgetPasswordForm";
 
 import ProtectedLayout from "./pages/ProtectedLayout";
-import Home from "./pages/home/Home";
 
-// import FinanceLayout from "./pages/finance/FinanceLayout";
-// import FinanceOverview from "./pages/finance/overview/FinanceOverview";
-// import Transactions from "./pages/finance/transactions/Transactions";
-// import Budgets from "./pages/finance/budgets/Budgets";
-// import Savings from "./pages/finance/savings/Savings";
-// import Analytics from "./pages/finance/analytics/Analytics";
+import HomeLayout from "./pages/main/HomeLayout";
+import FinanceLayout from "./pages/main/FinanceLayout";
+import FitnessLayout from "./pages/main/FitnessLayout";
+import AIOverviewLayout from "./pages/main/AIOverviewLayout";
+import HabitsLayout from "./pages/main/HabitsLayout";
+import ProfileLayout from "./pages/main/ProfileLayout";
+import SettingsLayout from "./pages/main/SettingsLayout";
+
+import FinanceOverview from "./pages/finance/FinanceOverview";
+import Transactions from "./pages/finance/Transactions";
+import Budgets from "./pages/finance/Budgets";
+import Savings from "./pages/finance/Savings";
+import Analytics from "./pages/finance/Analytics";
 
 export const router = createBrowserRouter([
   // Authentication routes
@@ -41,37 +47,61 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <HomeLayout />,
       },
       {
         path: "/home",
-        element: <Home />,
+        element: <HomeLayout />,
       },
       {
         path: "/finance",
-        // element: <FinanceLayout />,
+        element: <FinanceLayout />,
         children: [
           {
+            index: true,
+            element: <FinanceOverview />,
+          },
+          {
             path: "overview",
-            // element: <FinanceOverview />,
+            element: <FinanceOverview />,
           },
           {
             path: "transactions",
-            // element: <Transactions />,
+            element: <Transactions />,
           },
           {
             path: "budgets",
-            // element: <Budgets />,
+            element: <Budgets />,
           },
           {
             path: "savings",
-            // element: <Savings />,
+            element: <Savings />,
           },
           {
             path: "analytics",
-            // element: <Analytics />,
+            element: <Analytics />,
           },
         ],
+      },
+      {
+        path: "/fitness",
+        element: <FitnessLayout />,
+      },
+      {
+        path: "/habits",
+        element: <HabitsLayout />,
+      },
+      {
+        path: "/ai-overview",
+        element: <AIOverviewLayout />,
+      },
+      {
+        path: "/settings",
+        element: <SettingsLayout />,
+      },
+      {
+        path: "/profile",
+        element: <ProfileLayout />,
       },
     ],
   },
