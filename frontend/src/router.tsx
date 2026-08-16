@@ -5,8 +5,8 @@ import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import ForgetPasswordForm from "./components/auth/ForgetPasswordForm";
 
-// import ProtectedLayout from "./layouts/ProtectedLayout";
-// import Home from "./pages/home/Home";
+import ProtectedLayout from "./pages/ProtectedLayout";
+import Home from "./pages/home/Home";
 
 // import FinanceLayout from "./pages/finance/FinanceLayout";
 // import FinanceOverview from "./pages/finance/overview/FinanceOverview";
@@ -37,15 +37,15 @@ export const router = createBrowserRouter([
 
   // Everything underneath here requires authentication
   {
-    // element: <ProtectedLayout />,
+    element: <ProtectedLayout />,
     children: [
       {
         path: "/",
-        // element: <Home />,
+        element: <Home />,
       },
       {
         path: "/home",
-        // element: <Home />,
+        element: <Home />,
       },
       {
         path: "/finance",
