@@ -1,13 +1,48 @@
+import { NavLink } from "react-router-dom";
+import { Settings, User, ChevronDown } from "lucide-react";
+import logo from "../../assets/Logos/nexaLogo.svg";
+
 export default function TopBar() {
   return (
-    <header className="flex h-16 items-center justify-between border-b border-border bg-surface px-6">
-      <div className="font-bold text-xl text-primary">
-        NEXA
-      </div>
+    <header className="flex h-16 items-center justify-between border-b border-border bg-surface px-4">
+      <NavLink
+        to="/home"
+        className="flex items-center gap-2 rounded-md transition-opacity hover:opacity-80 cursor-pointer"
+      >
+        <img
+          className="h-9 w-9"
+          src={logo}
+          alt="Nexa"
+        />
 
-      <div className="flex items-center gap-6">
-        <button>⚙ Settings</button>
-        <button>👤 User ▾</button>
+        <span className="font-nexa text-2xl text-primary">
+          NEXA
+        </span>
+      </NavLink>
+
+      <div className="flex items-center gap-2 text-text-primary">
+        <NavLink
+          to="/settings"
+          className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-muted hover:text-text-primary"
+        >
+          <Settings size={18} />
+
+          <span className="hidden lg:inline">
+            Settings
+          </span>
+        </NavLink>
+
+        <button
+          className="flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-muted hover:text-text-primary"
+        >
+          <User size={18} />
+
+          <span className="hidden lg:inline">
+            Username Placeholder
+          </span>
+
+          <ChevronDown size={16} />
+        </button>
       </div>
     </header>
   );

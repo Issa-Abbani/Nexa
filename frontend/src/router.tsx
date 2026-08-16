@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import AuthLayout from "./pages/auth/AuthLayout";
 import LoginForm from "./components/auth/LoginForm";
@@ -47,7 +48,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomeLayout />,
+        element: <Navigate to="/home" replace />,
       },
       {
         path: "/home",

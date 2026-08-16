@@ -1,20 +1,66 @@
+import { NavLink } from "react-router-dom";
+import {
+  House,
+  Wallet,
+  Dumbbell,
+  ListChecks,
+  Sparkles,
+  LogOut,
+} from "lucide-react";
+
+const navItems = [
+  {
+    label: "Home",
+    to: "/home",
+    icon: House,
+  },
+  {
+    label: "Finance",
+    to: "/finance",
+    icon: Wallet,
+  },
+  {
+    label: "Fitness",
+    to: "/fitness",
+    icon: Dumbbell,
+  },
+  {
+    label: "Habits",
+    to: "/habits",
+    icon: ListChecks,
+  },
+  {
+    label: "AI Assistance",
+    to: "/ai-overview",
+    icon: Sparkles,
+  },
+];
+
 export default function Sidebar() {
   return (
-    <aside className="lg:flex hidden min-h-[calc(100vh-4rem)] w-56 flex-col border-r border-border bg-surface p-4">
-      <div className="mb-8 font-bold text-xl text-primary">
-        NEXA
-      </div>
-
-      <nav className="flex flex-col gap-2">
-        <button>🏠 Home</button>
-        <button>💰 Finance</button>
-        <button>🏋 Fitness</button>
-        <button>✓ Habits</button>
-        <button>🤖 AI Assistance</button>
+    <aside className="hidden min-h-[calc(100vh-4rem)] w-60 flex-col border-r border-border bg-surface px-4 py-6 lg:flex">
+      <nav className="flex flex-col gap-1">
+        {navItems.map(({ label, to, icon: Icon }) => (
+          <NavLink
+            key={to}
+            to={to}
+            className={({ isActive }) =>
+              `flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                isActive
+                  ? "bg-primary/10 text-primary"
+                  : "text-text-secondary hover:bg-surface-muted hover:text-text-primary"
+              }`
+            }
+          >
+            <Icon size={20} strokeWidth={2} />
+            <span>{label}</span>
+          </NavLink>
+        ))}
       </nav>
 
-      <button className="mt-auto">
-        Logout
+      <button className="mt-auto flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-expense transition-colors hover:bg-expense/10">
+        <LogOut size={20} strokeWidth={2} />
+        <span>Logout</span>
       </button>
     </aside>
   );
