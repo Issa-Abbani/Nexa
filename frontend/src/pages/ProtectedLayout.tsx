@@ -4,7 +4,7 @@ import Sidebar from "../components/layout/Sidebar";
 import MobileNavigation from "../components/layout/MobileNavigation";
 export default function ProtectedLayout() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       <TopBar />
 
       <div className="flex">
