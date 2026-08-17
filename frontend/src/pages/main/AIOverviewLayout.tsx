@@ -1,3 +1,11 @@
 export default function AIOverviewLayout() {
-  return <h1 className="text-text-primary">AI</h1>;
+  const text: string = "Hi";
+
+  return (
+    <>
+      {Array.from({ length: 200 }).map((_, i) => (
+        <h1 key={i}>{text}</h1>
+      ))}
+    </>
+  );
 }

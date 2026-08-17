@@ -4,7 +4,7 @@ import logo from "../../assets/Logos/nexaLogo.svg";
 
 export default function TopBar() {
   return (
-    <header className="flex h-16 items-center justify-between border-b border-border bg-surface px-4">
+    <header className="fixed right-0 left-0 flex h-16 items-center justify-between border-b border-border bg-surface px-4">
       <NavLink
         to="/home"
         className="flex items-center gap-2 rounded-md transition-opacity hover:opacity-80 cursor-pointer"

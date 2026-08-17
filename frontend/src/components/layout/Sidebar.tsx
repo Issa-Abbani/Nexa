@@ -38,7 +38,7 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="hidden min-h-[calc(100vh-4rem)] w-60 flex-col border-r border-border bg-surface px-4 py-6 lg:flex">
+    <aside className="hidden fixed bottom-0 min-h-[calc(100vh-4rem)] w-60 flex-col border-r border-border bg-surface px-4 py-6 lg:flex">
       <nav className="flex flex-col gap-1">
         {navItems.map(({ label, to, icon: Icon }) => (
           <NavLink
