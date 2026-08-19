@@ -1,8 +1,12 @@
 export interface Tab {
-  label: string;
-  path: string;
+  label: string,
+  path: string,
 };
 
 export interface TabNavigationProps {
-  tabs: Tab[];
+  tabs: Tab[],
 };
+
+export interface HamburgerNavigationProps extends TabNavigationProps{
+  title: string,
+}

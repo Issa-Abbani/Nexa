@@ -53,15 +53,15 @@ export default function FinanceOverview() {
   };
   */
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center  mb-15">
       {/* Header */}
-      <div className="flex justify-between mb-5">
-        <h2 className="text-text-primary text-5xl">Overview</h2>
-        <p className="text-2xl text-text-primary">This month</p>
+      <div className="flex justify-between items-baseline mb-5">
+        <h2 className="text-text-primary lg:text-5xl text-3xl">Overview</h2>
+        <span className="text-2xl text-text-primary">This month</span>
       </div>
 
       {/* Summary */}
-      <div className="grid grid-cols-1 gap-2 md:gap4 md:grid-cols-12 w-1/3 md:w-full ml-4 md:ml-0 mb-3">
+      <div className="grid grid-cols-1 gap-2 md:gap4 md:grid-cols-12 w-full mb-3 self-center">
         <div className="col-span-1 md:col-span-12 xl:col-span-6 lg:col-span-12">
           <BalanceCard {...balanceData} />
         </div>
@@ -82,7 +82,7 @@ export default function FinanceOverview() {
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 gap-4 md:gap4 md:grid-cols-12 w-1/3 md:w-full ml-4 md:ml-0 mb-3">
+      <div className="grid grid-cols-1 gap-4 md:gap4 md:grid-cols-12 w-full mb-3 self-center">
         <div className="col-span-1 md:col-span-12 xl:col-span-6 lg:col-span-12">
           <IncomeExpenseChart />
         </div>

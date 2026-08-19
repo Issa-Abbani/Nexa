@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <FinanceOverview />,
+            element: <Navigate to="overview" replace />,
           },
           {
             path: "overview",

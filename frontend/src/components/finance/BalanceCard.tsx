@@ -1,4 +1,4 @@
-import { ArrowUp, ArrowDown } from "lucide-react";
+import { Wallet } from "lucide-react";
 import type { IBalanceCard } from "../../types/Card";
 
 export default function BalanceCard(props: IBalanceCard) {
@@ -8,7 +8,7 @@ export default function BalanceCard(props: IBalanceCard) {
         <h2 className="text-base font-2xl text-text-primary">Total Balance</h2>
 
         <div className="text-text-primary">
-          {props.change > 0 ? <ArrowUp /> : <ArrowDown />}
+          <Wallet/>
         </div>
       </div>
 
