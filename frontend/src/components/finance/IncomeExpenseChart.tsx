@@ -22,9 +22,9 @@ const data = [
 
 export default function IncomeExpenseChart() {
   return (
-    <div className="w-full rounded-2xl border border-border bg-surface p-5 shadow-sm">
+    <div className="w-full rounded-2xl border border-border bg-surface p-5 shadow-sm cursor-pointer transition duration-300 ease-in hover:scale-[1.02] hover:bg-surface-muted">
       <div className="mb-5">
-        <h2 className="text-xl font-semibold text-text-primary">
+        <h2 className="text-2xl font-semibold text-text-primary">
           Income vs. Expenses
         </h2>
         <p className="text-sm text-text-secondary">

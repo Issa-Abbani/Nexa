@@ -5,7 +5,7 @@ export default function SummaryCard(props: ISummaryCard) {
   return (
     <div className="flex flex-col gap-5 rounded-2xl border border-border bg-surface p-5 shadow-sm cursor-pointer transition duration-300 ease-in hover:scale-[1.02] hover:bg-surface-muted">
       <div className="flex items-center justify-between">
-        <h2 className="text-base font-2xl text-text-primary">{props.title}</h2>
+        <h2 className="font-semibold text-2xl text-text-primary">{props.title}</h2>
 
         <div className="text-text-primary">
           {props.title === "Savings" ? (

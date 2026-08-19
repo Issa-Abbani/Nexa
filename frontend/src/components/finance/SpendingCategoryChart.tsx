@@ -27,9 +27,9 @@ const COLORS = [
 
 export default function SpendingCategoryChart() {
   return (
-    <div className="w-full rounded-2xl border border-border bg-surface p-5 shadow-sm">
+    <div className="w-full rounded-2xl border border-border bg-surface p-5 shadow-sm cursor-pointer transition duration-300 ease-in hover:scale-[1.02] hover:bg-surface-muted">
       <div className="mb-5">
-        <h2 className="text-xl font-semibold text-text-primary">
+        <h2 className="text-2xl font-semibold text-text-primary">
           Spending by Category
         </h2>
         <p className="text-sm text-text-secondary">

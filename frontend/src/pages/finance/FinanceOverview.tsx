@@ -2,6 +2,7 @@ import SummaryCard from "../../components/finance/SummaryCard";
 import BalanceCard from "../../components/finance/BalanceCard";
 import IncomeExpenseChart from "../../components/finance/IncomeExpenseChart";
 import SpendingCategoryChart from "../../components/finance/SpendingCategoryChart";
+import TransactionsSummary from "../../components/finance/TransactionsSummary";
 
 import type { ISummaryCard, IBalanceCard } from "../../types/Card";
 
@@ -92,7 +93,9 @@ export default function FinanceOverview() {
       </div>
 
       {/* Transactions */}
-      <div>{/* Recent Transactions */}</div>
+      <div>
+        <TransactionsSummary/>
+      </div>
 
       {/* Budgets + Savings */}
       <div>{/* Budget Progress + Savings Goals */}</div>

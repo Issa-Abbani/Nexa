@@ -9,7 +9,7 @@ export default function TabNavigation({ tabs }: TabNavigationProps) {
           <NavLink
             key={path}
             to={path}
-            className={({ isActive })=>`shrink-0 whitespace-nowrap p-1.5 ${isActive ? "text-primary bg-surface-muted rounded-t-lg rounded-b-none" : ""}`}
+            className={({ isActive })=>`shrink-0 whitespace-nowrap p-1.5 transition-colors duration-150 ${isActive ? "text-primary bg-surface-muted rounded-t-lg rounded-b-none" : ""}`}
           >
             {label}
           </NavLink>
