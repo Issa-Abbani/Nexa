@@ -1,9 +1,9 @@
-import SummaryCard from "../../components/finance/SummaryCard";
-import BalanceCard from "../../components/finance/BalanceCard";
-import IncomeExpenseChart from "../../components/finance/IncomeExpenseChart";
-import SpendingCategoryChart from "../../components/finance/SpendingCategoryChart";
-import TransactionsSummary from "../../components/finance/TransactionsSummary";
-import BudgetSummary from "../../components/finance/BudgetSummary";
+import SummaryCard from "../../components/finance/overview/SummaryCard";
+import BalanceCard from "../../components/finance/overview/BalanceCard";
+import IncomeExpenseChart from "../../components/finance/overview/IncomeExpenseChart";
+import SpendingCategoryChart from "../../components/finance/overview/SpendingCategoryChart";
+import TransactionsSummary from "../../components/finance/overview/TransactionsSummary";
+import BudgetSummary from "../../components/finance/overview/BudgetSummary";
 
 import type { ISummaryCard, IBalanceCard } from "../../types/Card";
 

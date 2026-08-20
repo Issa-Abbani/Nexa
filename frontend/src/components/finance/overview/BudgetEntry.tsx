@@ -1,5 +1,5 @@
-import type { BudgetEntryProps } from "../../types/Budget";
-import ProgressBar from "../general/ProgressBar";
+import type { BudgetEntryProps } from "../../../types/Budget";
+import ProgressBar from "../../general/ProgressBar";
 export default function BudgetEntry(props: BudgetEntryProps) {
   const percentage = Math.min((props.spent / props.limit) * 100, 100).toFixed(2);
   return (

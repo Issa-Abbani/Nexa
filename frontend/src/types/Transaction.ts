@@ -20,3 +20,8 @@ export interface TransactionRowProps {
   date: Date;
   category: TransactionCategory;
 }
+export interface TransactionActionsProps {
+  id: string;
+  onEdit: (id: string) => void;
+  onDelete: (id: string) => void;
+}

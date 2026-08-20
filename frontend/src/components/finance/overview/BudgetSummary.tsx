@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { ArrowUpRightFromSquare } from "lucide-react";
 import BudgetEntry from "./BudgetEntry";
-import type { BudgetEntryProps } from "../../types/Budget";
+import type { BudgetEntryProps } from "../../../types/Budget";
 export default function BudgetSumary() {
   const budgets: BudgetEntryProps[] = [
     {

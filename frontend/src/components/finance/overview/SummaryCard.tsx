@@ -1,4 +1,4 @@
-import type { ISummaryCard } from "../../types/Card";
+import type { ISummaryCard } from "../../../types/Card";
 import { ArrowUp, ArrowDown, PiggyBank } from "lucide-react";
 
 export default function SummaryCard(props: ISummaryCard) {

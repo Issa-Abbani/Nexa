@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import type { TransactionRowProps } from "../../types/Transaction";
+import type { TransactionRowProps } from "../../../types/Transaction";
 import TransactionEntry from "./TransactionEntry";
 import { ArrowUpRightFromSquare } from "lucide-react";
 export default function TransactionsSummary() {

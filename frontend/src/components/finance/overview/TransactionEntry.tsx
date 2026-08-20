@@ -1,4 +1,10 @@
-import type { TransactionRowProps } from "../../types/Transaction";
+/*
+===================================================================================
+Note that this component will also be used in the Transactions tab!               |
+===================================================================================
+*/
+
+import type { TransactionRowProps } from "../../../types/Transaction";
 
 export default function TransactionEntry(props: TransactionRowProps) {
   return (
