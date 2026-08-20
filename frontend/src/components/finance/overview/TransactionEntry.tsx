@@ -14,14 +14,15 @@ export default function TransactionEntry(props: TransactionRowProps) {
 
         <div className="flex flex-col">
           <span className="text-text-primary">{props.name}</span>
-          <span className="text-text-secondary">
-            {props.date.toDateString()} · {props.category}
+          <span className="text-text-secondary text-sm lg:text-md lg:flex flex-col flex-wrap">
+            <span>{props.date.toDateString()} ·</span>{" "}
+            <span>{props.category}</span>
           </span>
         </div>
       </div>
 
       <span
-        className={`${props.type === "expense" ? "text-expense" : "text-income"}`}
+        className={`${props.type === "expense" ? "text-expense" : "text-income"} text-xs md:text-md text-nowrap`}
       >
         {props.type === "expense" ? "-" : ""} ${props.amount}
       </span>

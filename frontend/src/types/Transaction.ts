@@ -24,4 +24,6 @@ export interface TransactionActionsProps {
   id: string;
   onEdit: (id: string) => void;
   onDelete: (id: string) => void;
+  activeDropdown: string | null;
+  setActiveDropdown: React.Dispatch<React.SetStateAction<string | null>>;
 }
