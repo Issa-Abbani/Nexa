@@ -11,7 +11,7 @@ interface AddTransactionModalProps {
   onClose: () => void;
 }
 
-export default function AddTransactionModal({
+export default function EditTransactionModal({
   onClose
 }: AddTransactionModalProps) {
   const [type, setType] = useState<TransactionType>("expense");
@@ -60,7 +60,7 @@ export default function AddTransactionModal({
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-semibold text-text-primary">
-            Add Transaction
+            Edit Transaction
           </h2>
 
           <button

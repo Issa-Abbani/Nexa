@@ -60,7 +60,7 @@ export default function AddTransactionModal({
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-semibold text-text-primary">
-            Add Transaction
+            Delete Transaction
           </h2>
 
           <button

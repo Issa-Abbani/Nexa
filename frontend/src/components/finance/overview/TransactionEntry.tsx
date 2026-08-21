@@ -14,7 +14,7 @@ export default function TransactionEntry(props: TransactionRowProps) {
 
         <div className="flex flex-col">
           <span className="text-text-primary">{props.name}</span>
-          <span className="text-text-secondary text-sm lg:text-md lg:flex flex-col flex-wrap">
+          <span className="text-text-secondary text-sm lg:text-md flex-wrap">
             <span>{props.date.toDateString()} ·</span>{" "}
             <span>{props.category}</span>
           </span>

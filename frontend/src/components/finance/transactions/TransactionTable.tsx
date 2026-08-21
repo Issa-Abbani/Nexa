@@ -1,4 +1,7 @@
-import type { TransactionRowProps } from "../../../types/Transaction";
+import type {
+  TransactionRowProps,
+  TableModificationProps,
+} from "../../../types/Transaction";
 import TransactionEntry from "../overview/TransactionEntry";
 import TransactionActions from "./TransactionActions";
 import { useState } from "react";
@@ -150,7 +153,9 @@ const transactions: TransactionRowProps[] = [
   },
 ];
 
-export default function TransactionTable() {
+export default function TransactionTable({
+  setTransactionType
+}: TableModificationProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const handleEdit = () => {
@@ -206,6 +211,8 @@ export default function TransactionTable() {
                     onDelete={handleDelete}
                     activeDropdown={activeDropdown}
                     setActiveDropdown={setActiveDropdown}
+                    setEdit = {()=> setTransactionType("edit")}
+                    setDelete = {()=> setTransactionType("delete")}
                   />
                 </div>
               ))}
@@ -244,6 +251,8 @@ export default function TransactionTable() {
                     onDelete={handleDelete}
                     activeDropdown={activeDropdown}
                     setActiveDropdown={setActiveDropdown}
+                    setEdit = {()=> setTransactionType("edit")}
+                    setDelete = {()=> setTransactionType("delete")}
                   />
                 </div>
               ))}

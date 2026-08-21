@@ -3,16 +3,21 @@ import type { TransactionActionsProps } from "../../../types/Transaction";
 import { EllipsisVertical } from "lucide-react";
 export default function TransactionActions({
   id,
-  onEdit,
-  onDelete,
+  // onEdit,
+  // onDelete,
   activeDropdown,
   setActiveDropdown,
+  setEdit,
+  setDelete
 }: TransactionActionsProps) {
   const isOpen = activeDropdown === id;
   return (
     <div className="flex items-center gap-4">
       <button
-        onClick={() => onEdit(id)}
+        onClick={()=>{
+          console.log("Editted")
+          setEdit()
+        }}
         aria-label="Edit transaction"
         className="cursor-pointer hidden md:block"
       >
@@ -20,7 +25,7 @@ export default function TransactionActions({
       </button>
 
       <button
-        onClick={() => onDelete(id)}
+        onClick={setDelete}
         aria-label="Delete transaction"
         className="cursor-pointer hidden md:block"
       >
@@ -30,7 +35,6 @@ export default function TransactionActions({
         <button
           className="cursor-pointer focus:bg-surface-muted active:bg-surface-muted rounded-2xl p-1.5"
           onClick={() => {
-            console.log("Open dropdown of" + id);
             setActiveDropdown(isOpen ? null : id);
           }}
         >
@@ -46,7 +50,7 @@ export default function TransactionActions({
 
             <div className="absolute right-0 top-full z-50 mt-2 w-max rounded-lg border border-surface-muted bg-surface p-1">
               <button
-                onClick={() => onEdit(id)}
+                onClick={setEdit}
                 className="flex cursor-pointer items-center gap-2 rounded-md p-2 text-text-primary hover:bg-surface-muted"
               >
                 <Pencil size={18} />
@@ -54,7 +58,7 @@ export default function TransactionActions({
               </button>
 
               <button
-                onClick={() => onDelete(id)}
+                onClick={setDelete}
                 className="flex cursor-pointer items-center gap-2 rounded-md p-2 text-expense hover:bg-surface-muted"
               >
                 <Trash2 size={18} color="red" />
